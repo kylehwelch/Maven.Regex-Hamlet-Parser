@@ -29,9 +29,28 @@ public class HamletParserTest {
     @Test
     public void testFindHamletUpperCase() {
         // Given
-        String hamlet = "hamlet";
+        String hamlet = "HAMLET";
         // When
         boolean actual = hamletParser.findHamlet(hamlet);
+        //Then
+        Assert.assertTrue(actual);
+    }
+
+    @Test
+    public void testFindHoratioLowerCase() {
+        // Given
+        String horatio = "horatio";
+        // When
+        boolean actual = hamletParser.findHoratio(horatio);
+        //Then
+        Assert.assertTrue(actual);
+    }
+    @Test
+    public void testFindHoratioUpperCase() {
+        // Given
+        String horatio = "HORATIO";
+        // When
+        boolean actual = hamletParser.findHoratio(horatio);
         //Then
         Assert.assertTrue(actual);
     }

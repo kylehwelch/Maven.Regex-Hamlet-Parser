@@ -48,8 +48,10 @@ public class HamletParser {
         return matcher.matches();
     }
 
-    public boolean findHoratio(){
-        return false;
+    public boolean findHoratio(String string){
+        Pattern pat = Pattern.compile("(?i)horatio");
+        Matcher matcher = pat.matcher(string);
+        return matcher.matches();
     }
 
     public String changeHamletToLeon(String hamlet) {
