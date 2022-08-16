@@ -1,5 +1,9 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static org.junit.Assert.*;
 
@@ -14,18 +18,26 @@ public class HamletParserTest {
     }
 
     @Test
-    public void testChangeHamletToLeon() {
+    public void testFindHamletLowerCase() {
+        // Given
+        String hamlet = "hamlet";
+        // When
+        boolean actual = hamletParser.findHamlet(hamlet);
+        //Then
+        Assert.assertTrue(actual);
+    }
+    @Test
+    public void testFindHamletUpperCase() {
+        // Given
+        String hamlet = "hamlet";
+        // When
+        boolean actual = hamletParser.findHamlet(hamlet);
+        //Then
+        Assert.assertTrue(actual);
     }
 
     @Test
-    public void testChangeHoratioToTariq() {
-    }
+    public void testFindHoratio(){
 
-    @Test
-    public void testFindHoratio() {
-    }
-
-    @Test
-    public void testFindHamlet() {
     }
 }
